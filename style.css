@@ -20,11 +20,19 @@ body {
 
 .sidebar {
     grid-column: 1 / 2;
+    background-color: blue;
+}
+
+
+.main_content {
+    display: grid;
+    grid-template-rows: max-content 1fr;
 }
 
 .nav {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    background-color: red;
 }
 
 .left_nav_content {
@@ -35,6 +43,6 @@ body {
     justify-self: right;
 }
 
-.main_screen {
-    grid-area: 2 / 2 / 3 / 3;
+.dashboard {
+    background-color: yellow;
 }
