@@ -40,6 +40,7 @@ body {
     list-style: none;
     justify-self: left;
     display: flex;
+    align-items: center;
     gap: 1rem;
 }
 
@@ -66,6 +67,11 @@ svg,
 #alerts,
 .profile_picture {
     width: 32px; height: 32px;
+}
+
+.vertical_rule {
+    height: 32px;
+    border-left:1px solid #000;   
 }
 
 .profile_container {
