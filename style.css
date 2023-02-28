@@ -33,14 +33,24 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     background-color: red;
+    padding: 0.5rem 1rem;
 }
 
 .left_nav_content {
+    list-style: none;
     justify-self: left;
+    display: flex;
+    gap: 1rem;
 }
 
 .right_nav_content {
     justify-self: right;
+    display: flex;
+    gap: 1rem;
+}
+
+input {
+    
 }
 
 .dashboard {
