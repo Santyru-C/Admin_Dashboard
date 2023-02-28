@@ -46,11 +46,52 @@ body {
 .right_nav_content {
     justify-self: right;
     display: flex;
+    align-items: center;
     gap: 1rem;
 }
 
+.searchbar_container {
+    display: flex;
+    gap: 0.25rem;
+}
+
+#alerts {
+    width: 32px; height: 32px;
+    background-image: url(./icons/bell-ringing.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+svg,
+#alerts,
+.profile_picture {
+    width: 32px; height: 32px;
+}
+
+.profile_container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.profile_name {
+    padding: 0.5rem 0;
+}
+.profile_picture {
+    background-image: url(./icons/profile-default.svg);
+}
+
+button,
 input {
-    
+  font-family: inherit;
+  width: 100%;
+  padding: 0.25rem 0.5rem;
+}
+
+input {
+    appearance: none;
+    outline: none;
+    border-radius: 10px;
 }
 
 .dashboard {
