@@ -1,3 +1,6 @@
+:root {
+    --gap1: 0.75rem;
+}
 * {
     box-sizing: border-box;
     font-family: sans-serif;
@@ -135,7 +138,10 @@ input {
     gap: 0.75rem;
 }
 
-.dives,
+.dive_card,
+.card_img,
+.card_text_container,
+.card_controls,
 .gold_overview,
 .minerals_collected,
 .top_performance,
@@ -146,6 +152,26 @@ input {
 
 .dives {
     grid-column: 1 / 4;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+}
+
+.dive_card{
+    padding: 0.75rem;
+    display: grid;
+    grid-template-rows: 1fr 1.5fr max-content;
+    gap: 0.75rem;
+    border-radius: 10px;
+}
+
+.card_img {
+    border-radius: 5px;
+}
+
+.card_controls{
+    display: flex;
+    justify-content: flex-end;
 }
 
 .gold_overview {
