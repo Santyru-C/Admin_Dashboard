@@ -14,16 +14,34 @@ body {
 }
 
 .container {
+    min-height: 100vh   ;
     display: grid;
-    grid-template-columns: max-content 1fr;
+    grid-template-columns: clamp(180px, 25%, 200px) 1fr;
+}
+
+ul {
+    list-style: none;
 }
 
 .sidebar {
     grid-column: 1 / 2;
     background-color: blue;
+    display: grid;
+    grid-template-rows: repeat(3, max-content);
+    justify-content: start;
+    padding: 0.5rem 0 0 1rem;
+    gap: 2rem;
 }
 
+.logo,
+.options,
+.settings_bar{
+    border: 1px solid black;
+}
 
+.logo {
+    align-self: center;
+}
 .main_content {
     display: grid;
     grid-template-rows: max-content 1fr;
@@ -102,4 +120,6 @@ input {
 
 .dashboard {
     background-color: yellow;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
 }
