@@ -131,23 +131,17 @@ input {
     gap: 0.75rem;
 }
 
+.card_img,
+.dashboard_cell{
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
 .projects {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     gap: 0.75rem;
-}
-
-.dive_card,
-.card_img,
-.card_text_container,
-.control,
-.gold_overview,
-.minerals_collected,
-.top_performance,
-.announcement_container,
-.trending {
-    border: 1px solid black;
 }
 
 .dives {
@@ -162,7 +156,6 @@ input {
     display: grid;
     grid-template-rows: 1fr 1.5fr max-content;
     gap: 0.75rem;
-    border-radius: 8px;
 }
 
 .card_img {
@@ -198,18 +191,45 @@ input {
     gap: 0.75rem;
 }
 
-.notifications_1 {
+.notifications_1,
+.notifications_2 {
     display: flex;
     flex-direction: column;
     gap: var(--gap1)
 }
 
-.announcement_container {
+.announcement_container,
+.trending_container {
     flex: 1;
     padding: 1.5rem;
     display: grid;
-    grid-template-rows: repeat(3, 1fr);
     gap: var(--gap1);
-    border-radius: 8px;
+}
+.announcement_container {
+    grid-template-rows: repeat(3, 1fr);
+}
 
+.announcement_text {
+    font-size: 0.9rem;
+}
+
+.trending_user {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.trending_container {
+    grid-template-rows: repeat(4, 1fr);
+}
+
+.profile_picture_container {
+    height: 45px; width: 45px;
+    border: 1px solid black; /*change border to other color*/
+    border-radius: 25px;
+}
+
+.trending_info {
+    flex: 1;
+    display: grid;
+    grid-template-rows: repeat(2, max-content);
 }
