@@ -1,5 +1,9 @@
 :root {
     --gap1: 0.75rem;
+    /*Colors*/
+    --dashboard-background: #403726;
+    --dashboard-cell-background: #0D0C08;
+    --neon-orange: #F28705;
 }
 * {
     box-sizing: border-box;
@@ -16,6 +20,10 @@ body {
     line-height: 1.5;
 }
 
+.sidebar,
+.nav{
+    position: sticky;
+}
 /*Sidebar*/
 
 .container {
@@ -128,7 +136,7 @@ input {
 /*Main*/
 
 .dashboard {
-    background-color: yellow;
+    background-color: var(--dashboard-background);
     display: grid;
     grid-template-columns: 4fr 1fr;
     padding: 0.75rem;
@@ -137,8 +145,51 @@ input {
 
 .card_img,
 .dashboard_cell{
-    border: 1px solid black;
+    border: 2px solid var(--neon-orange);
     border-radius: 8px;
+    background-color: var(--dashboard-cell-background);
+}
+
+.card_img {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#img1 {
+    background-image: url(./images/Magma-DRG.jpg);
+}
+
+#img2 {
+    background-image: url(./images/GlacialStrata-DRG.jpg);
+}
+
+#img3 {
+    background-image: url(./images/RadioactiveZone-DRG.jpg);
+}
+
+.orange_filter {
+    filter: invert(45%) sepia(40%) saturate(2275%) hue-rotate(12deg) brightness(111%) contrast(96%);
+}
+
+.card_text_container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.card_title {
+    background-color: var(--neon-orange);
+    border-radius: 4px;
+    padding: 2.5px 5px;
+}
+
+.card_text {
+    flex: 1;
+    padding: 5px;
+    border: 1px solid var(--neon-orange);
+    border-radius: 4px;
+    color: var(--neon-orange);
 }
 
 .projects {
@@ -174,7 +225,21 @@ input {
 }
 
 .control {
-    width: 24px; height: 24px;
+    width: 28px; height: 28px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.c1 {
+    background-image: url(./icons/star-outline.svg);
+}
+
+.c2 {
+    background-image: url(./icons/eye-outline.svg);
+}
+
+.c3 {
+    background-image: url(./icons/share-variant-outline.svg);
 }
 
 .gold_overview{
@@ -241,3 +306,4 @@ input {
 a {
     text-decoration: none;
 }
+
