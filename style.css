@@ -331,13 +331,25 @@ h2, h4 {
 }
 
 .profile_picture_container {
-    height: 50px; width: 50px;
+    height: 4rem; width: 4rem;
     border: var(--thick-border) var(--neon-orange); /*change border to other color*/
-    border-radius: 25px;
+    border-radius: 2rem;
 }
 
-#p2 {
+#pic1{
+    background-image: url(./images/bosco_DRG.jpeg);
+}
+
+#pic2 {
     background-image: url(./images/Driller_portrait.jpg);
+}
+
+#pic3 {
+    background-image: url(./images/Engineer_portrait.jpg);
+}
+
+#pic4 {
+    background-image: url(./images/Gunner_portrait.jpg);
 }
 
 .trending_info {
@@ -346,6 +358,9 @@ h2, h4 {
     grid-template-rows: repeat(2, max-content);
 }
 
+.trending_description {
+    font-size: 0.9rem;
+}
 a {
     text-decoration: none;
 }
