@@ -1,13 +1,28 @@
 :root {
     --gap1: 0.75rem;
+    --gap2: 0.5rem;
+    --gap3: 0.25rem;
+
     /*Colors*/
-    --dashboard-background: #403726;
-    --dashboard-cell-background: #0D0C08;
-    --neon-orange: #F28705;
+    --dashboard-background: #292622;
+    --dashboard-cell-background: rgba(13, 12, 8, 0.5);
+    --sidebar-background: #0D0C08;
+    --text-color: white;
+    --neon-orange: #FF8F05;
+
+    /*Borders*/
+    --thin-border: 1px solid;
+    --thick-border: 2px solid;
 }
+
+@font-face {
+    font-family: roboto;
+    src: url(./fonts/Roboto-Regular.ttf);
+  }
+  
 * {
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: roboto;
     margin: 0;
     padding: 0;
 }
@@ -38,11 +53,13 @@ ul {
 
 .sidebar {
     grid-column: 1 / 2;
-    background-color: blue;
     display: grid;
     grid-template-rows: repeat(3, max-content);
     justify-items: stretch;
     gap: 2rem;
+    background-color: var(--sidebar-background);
+    border-right: 2px solid var(--neon-orange);
+    color: var(--neon-orange);
 }
 
 .logo {
@@ -57,15 +74,18 @@ ul {
     font-size: 1.25rem;
     line-height: 3rem;
 }
+
 .main_content {
     display: grid;
     grid-template-rows: max-content 1fr;
 }
 
+/*Nav bar*/
+
 .nav {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    background-color: red;
+    background-color: var(--neon-orange);
     padding: 0.5rem 2rem;
 }
 
@@ -143,14 +163,20 @@ input {
     gap: 0.75rem;
 }
 
-.card_img,
 .dashboard_cell{
     border: 2px solid var(--neon-orange);
     border-radius: 8px;
+    box-shadow: 1px 1px 3px var(--neon-orange);
     background-color: var(--dashboard-cell-background);
 }
 
-.card_img {
+.dashboard_cell p,
+h2, h4 {
+    color: white;
+}
+
+.card_img,
+.profile_picture_container {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -170,26 +196,6 @@ input {
 
 .orange_filter {
     filter: invert(45%) sepia(40%) saturate(2275%) hue-rotate(12deg) brightness(111%) contrast(96%);
-}
-
-.card_text_container {
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
-}
-
-.card_title {
-    background-color: var(--neon-orange);
-    border-radius: 4px;
-    padding: 2.5px 5px;
-}
-
-.card_text {
-    flex: 1;
-    padding: 5px;
-    border: 1px solid var(--neon-orange);
-    border-radius: 4px;
-    color: var(--neon-orange);
 }
 
 .projects {
@@ -217,6 +223,24 @@ input {
     border-radius: 4px;
 }
 
+.card_text_container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.card_title {
+    color: white;
+    border-radius: 4px;
+    border-bottom: 1px solid var(--neon-orange);
+    padding: 2.5px 5px;
+}
+
+.card_text {
+    flex: 1;
+    padding: 5px;
+    border-radius: 4px;
+}
 .card_controls{
     padding: 0 5px;
     display: flex;
@@ -254,17 +278,29 @@ input {
     grid-area: 3 / 1 / 4 / 3;
 }
 
+/**/
 .notifications {
     display: grid;
     grid-template-rows: 1.5fr 1fr;
-    gap: 0.75rem;
+    gap: var(--gap1);
+}
+
+.section_title {
+    padding-left: var(--gap3);
 }
 
 .notifications_1,
 .notifications_2 {
     display: flex;
     flex-direction: column;
-    gap: var(--gap1)
+    gap: var(--gap3);
+}
+
+/*Announcements*/
+.announcement > h4 {
+    border-bottom: 1px solid var(--neon-orange);
+    padding-left: 0.25rem;
+    margin-bottom: 5px;
 }
 
 .announcement_container,
@@ -280,7 +316,10 @@ input {
 
 .announcement_text {
     font-size: 0.9rem;
+    border-bottom: 1px solid var(--neon-orange)
 }
+
+/*Trending*/
 
 .trending_user {
     display: flex;
@@ -292,9 +331,13 @@ input {
 }
 
 .profile_picture_container {
-    height: 45px; width: 45px;
-    border: 1px solid black; /*change border to other color*/
+    height: 50px; width: 50px;
+    border: var(--thick-border) var(--neon-orange); /*change border to other color*/
     border-radius: 25px;
+}
+
+#p2 {
+    background-image: url(./images/Driller_portrait.jpg);
 }
 
 .trending_info {
