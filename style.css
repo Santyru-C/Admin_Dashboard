@@ -84,17 +84,30 @@ ul {
 
 .nav {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    background-color: var(--neon-orange);
+    grid-template-columns: 1fr max-content;
+    color: var(--text-color);
+    background-color: var(--sidebar-background);
     padding: 0.5rem 2rem;
+    border-bottom: 2px solid var(--neon-orange);
 }
 
 .left_nav_content {
-    list-style: none;
     justify-self: left;
     display: flex;
     align-items: center;
     gap: 2rem;
+}
+
+.left_nav_button {
+    border: none;
+    color: black;
+    font-size: 1.1rem;
+    font-weight: 600;
+    background-color: var(--neon-orange);
+    padding: var(--gap3) var(--gap1);
+    border-radius: 4px;
+    box-shadow: 1px 1px 3px var(--neon-orange);
+
 }
 
 .right_nav_content {
