@@ -6,7 +6,7 @@
     /*Colors*/
     --dashboard-background: #292622;
     --dashboard-cell-background: rgba(13, 12, 8, 0.5);
-    --sidebar-background: #0D0C08;
+    --main-background1: #0D0C08;
     --text-color: white;
     --neon-orange: #FF8F05;
 
@@ -57,7 +57,7 @@ ul {
     grid-template-rows: repeat(3, max-content);
     justify-items: stretch;
     gap: 2rem;
-    background-color: var(--sidebar-background);
+    background-color: var(--main-background1);
     border-right: 2px solid var(--neon-orange);
     color: var(--neon-orange);
 }
@@ -86,9 +86,9 @@ ul {
     display: grid;
     grid-template-columns: 1fr max-content;
     color: var(--text-color);
-    background-color: var(--sidebar-background);
+    background-color: var(--main-background1);
     padding: 0.5rem 2rem;
-    border-bottom: 2px solid var(--neon-orange);
+    border-bottom: var(--thick-border) var(--neon-orange);
 }
 
 .left_nav_content {
@@ -118,26 +118,42 @@ ul {
 }
 
 .searchbar_container {
+    height: 2rem;
     display: flex;
-    gap: 0.25rem;
+    gap: var(--gap3);
+    position: relative;
+}
+  
+#searchbar {
+    font-family: inherit;
+    padding: var(--gap3) var(--gap2);
+    appearance: none;
+    outline: none;
+    color: var(--text-color);
+    background-color: var(--main-background1);
+    border: var(--thin-border) var(--neon-orange);
+    border-radius: 4px;
 }
 
-#alerts {
-    width: 32px; height: 32px;
-    background-image: url(./icons/bell-ringing.svg);
-    background-position: center;
-    background-repeat: no-repeat;
+#searchbar::placeholder {
+    color: white;
 }
 
-svg,
-#alerts,
-.profile_picture {
-    width: 32px; height: 32px;
+.submit_button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+}
+
+.svg_image {
+    height: 2rem; width: 2rem;   
 }
 
 .vertical_rule {
     height: 32px;
-    border-left:1px solid #000;   
+    border-left: var(--thin-border) var(--neon-orange);   
 }
 
 .profile_container {
@@ -151,19 +167,6 @@ svg,
 }
 .profile_picture {
     background-image: url(./icons/profile-default.svg);
-}
-
-button,
-input {
-  font-family: inherit;
-  width: 100%;
-  padding: 0.25rem 0.5rem;
-}
-
-input {
-    appearance: none;
-    outline: none;
-    border-radius: 10px;
 }
 
 /*Main*/
@@ -188,6 +191,7 @@ h2, h4 {
     color: white;
 }
 
+.control,
 .card_img,
 .profile_picture_container {
     background-position: center;
@@ -263,8 +267,6 @@ h2, h4 {
 
 .control {
     width: 28px; height: 28px;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .c1 {
