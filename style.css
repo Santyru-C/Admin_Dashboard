@@ -39,13 +39,14 @@ body {
 .nav{
     position: sticky;
 }
-/*Sidebar*/
 
 .container {
     min-height: 100vh   ;
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: max-content 4fr;
 }
+
+/*Sidebar*/
 
 ul {
     list-style: none;
@@ -78,13 +79,13 @@ ul {
 .main_content {
     display: grid;
     grid-template-rows: max-content 1fr;
+    background-color: var(--dashboard-background);
 }
 
 /*Nav bar*/
 
 .nav {
     color: var(--text-color);
-    background-color: var(--main-background1);
     padding: 0.5rem 1rem;
 }
 
@@ -92,6 +93,7 @@ ul {
     display: grid;
     grid-template-columns: min-content max-content;
     justify-content: space-between;
+    background-color: var(--main-background1);
     border: var(--thick-border) var(--neon-orange);
     padding: 0.5rem 1rem;
 }
@@ -186,9 +188,8 @@ ul {
 /*Main*/
 
 .dashboard {
-    background-color: var(--dashboard-background);
     display: grid;
-    grid-template-columns: minmax(min-content, 1fr) 25ch;
+    grid-template-columns: minmax(auto, 1fr) 25ch;
     padding: 0.75rem;
     gap: 0.75rem;
 }
@@ -300,7 +301,7 @@ h2, h4 {
 
 .stats{
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: max-content max-content;
     gap: var(--gap1);
 }
 
