@@ -33,12 +33,11 @@
         ]);
 
         // Set chart options
-        var options = {'title':'How Much Pizza I Ate Last Night',
-                       };
+        var options = {};
 
         // Instantiate and draw our chart, passing in some options.
         var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
-        chart.draw(data, options);
+        chart.draw(data);
       }
     </script>
 </head>
@@ -93,58 +92,55 @@
             </div>
             <div class="dashboard">
                 <div class="projects">
-                    <div class="dives dashboard_cell">
-                        <h2>Dives</h2>
-                        <div class="card_container">
-                            <div class="cell_main_content dive_card">
-                                <div class="card_img" id="img1"></div>
-                                <div class="card_text_container">
-                                    <h4 class="card_title">Dive</h4>
-                                    <p class="card_text">Nunc cursus, enim eleifend vulputate faucibus, ipsum felis placerat odio, eu accumsan enim ipsum eget arcu.</p>
-                                </div>
-                                <div class="card_controls">
-                                    <div class="control c1 orange_filter"></div>
-                                    <div class="control c2 orange_filter"></div>
-                                    <div class="control c3 orange_filter"></div>
-                                </div>
+                    <div class="cell_main_content dive_card">
+                            <div class="card_img" id="img1"></div>
+                            <div class="card_text_container">
+                                <h4 class="card_title">Dive</h4>
+                                <p class="card_text">Nunc cursus, enim eleifend vulputate faucibus, ipsum felis placerat odio, eu accumsan enim ipsum eget arcu.</p>
                             </div>
-                            <div class="cell_main_content dive_card">
-                                <div class="card_img" id="img2"></div>
-                                <div class="card_text_container">
-                                    <h4 class="card_title">Dive</h4>
-                                    <p class="card_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut condimentum odio massa. Suspendisse volutpat hendrerit felis.</p>
-                                </div>
-                                <div class="card_controls">
-                                    <div class="control c1 orange_filter"></div>
-                                    <div class="control c2 orange_filter"></div>
-                                    <div class="control c3 orange_filter"></div>
-                                </div>
+                            <div class="card_controls">
+                                <div class="control c1 orange_filter"></div>
+                                <div class="control c2 orange_filter"></div>
+                                <div class="control c3 orange_filter"></div>
                             </div>
-                            <div class="cell_main_content dive_card">
-                                <div class="card_img" id="img3"></div>
-                                <div class="card_text_container">
-                                    <h4 class="card_title">Dive</h4>
-                                    <p class="card_text">Integer eu dictum nibh. Aenean hendrerit gravida felis. Aliquam luctus dui egestas sapien mattis, sit amet eleifend enim faucibus. </p>
-                                </div>
-                                <div class="card_controls">
-                                    <div class="control c1 orange_filter"></div>
-                                    <div class="control c2 orange_filter"></div>
-                                    <div class="control c3 orange_filter"></div>
-                                </div>
+                    </div>
+                    <div class="cell_main_content dive_card">
+                        <div class="card_img" id="img2"></div>
+                        <div class="card_text_container">
+                            <h4 class="card_title">Dive</h4>
+                            <p class="card_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut condimentum odio massa. Suspendisse volutpat hendrerit felis.</p>
                         </div>
+                        <div class="card_controls">
+                            <div class="control c1 orange_filter"></div>
+                            <div class="control c2 orange_filter"></div>
+                            <div class="control c3 orange_filter"></div>
                         </div>
                     </div>
-                    <div class="gold_overview dashboard_cell">
-                        <h2>Gold Overview</h2>
-                        <div class="cell_main_content" id="chart_div"></div>
+                    <div class="cell_main_content dive_card">
+                        <div class="card_img" id="img3"></div>
+                        <div class="card_text_container">
+                            <h4 class="card_title">Dive</h4>
+                            <p class="card_text">Integer eu dictum nibh. Aenean hendrerit gravida felis. Aliquam luctus dui egestas sapien mattis, sit amet eleifend enim faucibus. </p>
+                        </div>
+                        <div class="card_controls">
+                            <div class="control c1 orange_filter"></div>
+                            <div class="control c2 orange_filter"></div>
+                            <div class="control c3 orange_filter"></div>
+                        </div>
                     </div>
-                    <div class="dashboard_cell minerals_collected">
-                        <h2>Minerals Collected</h2>
-                        <div class="cell_main_content"></div>
-                    </div>
-                    <div class="dashboard_cell top_performance">
-                        <h2>Top Performance</h2>
-                        <div class="cell_main_content"></div>
+                    <div class="charts">
+                        <div class="gold_overview dashboard_cell">
+                            <h2>Gold Overview</h2>
+                            <div class="cell_main_content"></div>
+                        </div>
+                        <div class="dashboard_cell top_performance">
+                            <h2>Top Performance</h2>
+                            <div class="cell_main_content"></div>
+                        </div>
+                        <div class="dashboard_cell minerals_collected">
+                            <h2>Minerals Collected</h2>
+                            <div class="cell_main_content"></div>
+                        </div>
                     </div>
                 </div>
                 <div class="notifications">
