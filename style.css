@@ -197,6 +197,12 @@ button {
     gap: var(--gap1);
 }
 
+.dashboard_cell {
+    display: grid;
+    grid-template-rows: max-content 1fr;
+    gap: var(--gap3);
+}
+
 .cell_main_content{
     border: var(--thick-border) var(--neon-orange);
     border-radius: 8px;
@@ -237,12 +243,6 @@ h2, h4 {
     display: grid;
     grid-template-rows: max-content 1fr;
     gap: var(--gap1);
-}
-
-.dives {
-    display: grid;
-    grid-template-rows: max-content 1fr;
-    gap: var(--gap3);
 }
 
 .card_container {
