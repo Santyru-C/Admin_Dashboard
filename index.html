@@ -6,6 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Admin Dashboard</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+
+      // Load the Visualization API and the corechart package.
+      google.charts.load('current', {'packages':['corechart']});
+
+      // Set a callback to run when the Google Visualization API is loaded.
+      google.charts.setOnLoadCallback(drawChart);
+
+      // Callback that creates and populates a data table,
+      // instantiates the pie chart, passes in the data and
+      // draws it.
+      function drawChart() {
+
+        // Create the data table.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Topping');
+        data.addColumn('number', 'Slices');
+        data.addRows([
+          ['Mushrooms', 3],
+          ['Onions', 1],
+          ['Olives', 1],
+          ['Zucchini', 1],
+          ['Pepperoni', 2]
+        ]);
+
+        // Set chart options
+        var options = {'title':'How Much Pizza I Ate Last Night',
+                       };
+
+        // Instantiate and draw our chart, passing in some options.
+        var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
 </head>
 <body>
     <div class="container">
@@ -44,9 +79,11 @@
                                     <img class="svg_image orange_filter" src="./icons/magnifying-glass.svg" alt="magnifiying glass">
                                 </button>
                         </div>
+                        <div class="vertical_rule"></div>
                         <div id="alerts">
                             <img class="svg_image orange_filter" src="./icons/bell.svg" alt="alert bell">
                         </div>
+                        <div class="vertical_rule"></div>
                         <div class="profile_container">
                             <div class="username">Mission Control</div>
                             <div class="profile_picture_container" id="user_pic"></div>
@@ -59,7 +96,7 @@
                     <div class="dives">
                         <h2>Dives</h2>
                         <div class="card_container">
-                            <div class="dashboard_cell dive_card">
+                            <div class="cell_main_content dive_card">
                                 <div class="card_img" id="img1"></div>
                                 <div class="card_text_container">
                                     <h4 class="card_title">Dive</h4>
@@ -71,7 +108,7 @@
                                     <div class="control c3 orange_filter"></div>
                                 </div>
                             </div>
-                            <div class="dashboard_cell dive_card">
+                            <div class="cell_main_content dive_card">
                                 <div class="card_img" id="img2"></div>
                                 <div class="card_text_container">
                                     <h4 class="card_title">Dive</h4>
@@ -83,7 +120,7 @@
                                     <div class="control c3 orange_filter"></div>
                                 </div>
                             </div>
-                            <div class="dashboard_cell dive_card">
+                            <div class="cell_main_content dive_card">
                                 <div class="card_img" id="img3"></div>
                                 <div class="card_text_container">
                                     <h4 class="card_title">Dive</h4>
@@ -97,16 +134,19 @@
                         </div>
                         </div>
                     </div>
-                    <div class="stats">
-                        <div class="dashboard_cell gold_overview">Gold Overview</div>
-                        <div class="dashboard_cell minerals_collected">Minerals Collected</div>
-                        <div class="dashboard_cell top_performance">Top Performance</div>
+                    <div class="gold_overview">
+                        <h2>Gold Overview</h2>
+                        <div class="cell_main_content" id="chart_div"></div>
                     </div>
+                    <div class="cell_main_content minerals_collected">
+                        <h2>Minerals Collected</h2>
+                    </div>
+                    <div class="cell_main_content top_performance">Top Performance</div>
                 </div>
                 <div class="notifications">
                     <div class="notifications_1">
                         <h2 class="section_title">Announcements</h2>
-                        <div class="dashboard_cell announcement_container">
+                        <div class="cell_main_content announcement_container">
                             <div class="announcement">
                                 <h4>Site Maintenance</h4>
                                 <p class="announcement_text">orem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada, risus et semper eleifend, turpis velit placerat massa.</p>
@@ -123,7 +163,7 @@
                     </div>
                     <div class="notifications_2">
                         <h2 class="section_title">Trending</h2>
-                        <div class="dashboard_cell trending_container">
+                        <div class="cell_main_content trending_container">
                             <div class="trending_user">
                                 <div class="profile_picture_container" id="pic1"></div>
                                 <div class="trending_info">
@@ -148,7 +188,7 @@
                                     <a href="">
                                         <h4 class="trending_username">@engineer</h4>
                                     </a>
-                                    <p class="trending_description">All in a day's work.</p>
+                                    <p class="trending_description">Repairing sentry.</p>
                                 </div>
                             </div>
                             <div class="trending_user">
