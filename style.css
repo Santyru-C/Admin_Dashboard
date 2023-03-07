@@ -305,18 +305,6 @@ h2, h4 {
     gap: var(--gap1);
 }
 
-.gold_overview{
-    /*grid-area: 2 / 1 / 3 / 3;*/
-}
-
-.minerals_collected {
-    /*grid-area: 2 / 3 / 4 / 4;*/
-}
-
-.top_performance {
-    /*grid-area: 3 / 1 / 4 / 3;*/
-}
-
 /**/
 .notifications {
     display: grid;
