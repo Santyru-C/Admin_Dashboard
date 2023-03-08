@@ -45,6 +45,10 @@ ul {
     list-style: none;
 }
 
+li {
+    display: flex;
+}
+
 button {
     border: none;
     cursor: pointer;
@@ -263,7 +267,7 @@ h2, h4 {
     background-image: url(./images/Wallpaper_Team_HD.jpg);
 }
 
-#img8 {
+#img8    {
     background-image: url(./images/Noxius_invation.jpg) ;
 }
 
