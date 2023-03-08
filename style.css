@@ -192,15 +192,14 @@ button {
 
 .dashboard {
     display: grid;
-    grid-template-columns: minmax(auto, 1fr) 25ch;
+    grid-template-columns: 1fr 25ch;
     padding:var(--gap1);
     gap: var(--gap1);
 }
 
 .projects {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-template-rows: max-content;
+    display: flex;
+    flex-direction: column;
     gap: var(--gap1);
 }
 
@@ -222,6 +221,12 @@ h2, h4 {
     color: var(--text-color);
 }
 
+.card_wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--gap1);
+}
+
 .control,
 .card_img,
 .profile_picture_container {
@@ -240,6 +245,26 @@ h2, h4 {
 
 #img3 {
     background-image: url(./images/RadioactiveZone-DRG.jpg);
+}
+
+#img4 {
+    background-image: url(./images/Fungus_Bug_final.jpg);
+}
+
+#img5 {
+    background-image: url(./images/DRG_Wallpaper_DenseBiozone.jpg);
+}
+
+#img6 {
+    background-image: url(./images/DRG_Wallpaper_CrystalCaves.jpg);
+}
+
+#img7 {
+    background-image: url(./images/Wallpaper_Team_HD.jpg);
+}
+
+#img8 {
+    background-image: url(./images/Noxius_invation.jpg) ;
 }
 
 .orange_filter {
@@ -303,33 +328,10 @@ h2, h4 {
     background-image: url(./icons/share-variant-outline.svg);
 }
 
-.charts{
-    grid-column: 1 / -1;
-    display: grid;
-    gap: var(--gap1);
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /*subgrid not supported in most web browsers*/
-}
-
-.gold_overview {
-    grid-column: 1 / 3;
-}
-.minerals_collected {
-    grid-column: 3 / 4;
-    grid-row: 1 / 3;
-}
-
-.top_performance {
-    grid-area: 2 / 1 / 3 / 3;
-}
-
-
-
-
-
 /**/
 .notifications {
     display: grid;
-    grid-template-rows: 1fr auto;
+    grid-template-rows: max-content max-content;
     gap: var(--gap1);
 }
 
