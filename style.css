@@ -47,6 +47,8 @@ ul {
 
 li {
     display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
 button {
@@ -64,9 +66,8 @@ button {
 
 .sidebar {
     grid-column: 1 / 2;
-    display: grid;
-    grid-template-rows: repeat(3, max-content);
-    justify-items: stretch;
+    display: flex;
+    flex-direction: column;
     gap: 2rem;
     background-color: var(--main-background1);
     border-right: var(--thick-border) var(--neon-orange);
@@ -75,8 +76,10 @@ button {
 
 .logo {
     justify-self: center;
-    font-size: 1.75rem;
-    padding: 0.5rem 1rem;
+    display: flex;
+    gap: var(--gap2);
+    font-size: 1.50rem;
+    padding: 1rem;
 }
 
 .options,
