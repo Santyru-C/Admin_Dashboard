@@ -13,6 +13,7 @@
     /*Borders*/
     --thin-border: 1px solid;
     --thick-border: 2px solid;
+    --main-border-radius: 4px;
 }
 
 /*General*/
@@ -68,6 +69,9 @@ button {
     grid-column: 1 / 2;
     display: flex;
     flex-direction: column;
+    /*display: grid;
+    grid-template-rows: repeat(3, max-content);
+    justify-items: stretch;*/
     gap: 2rem;
     background-color: var(--main-background1);
     border-right: var(--thick-border) var(--neon-orange);
@@ -84,7 +88,7 @@ button {
 
 .options,
 .settings {
-    padding: 0 2rem;
+    padding-left: 1rem;
     font-size: 1.25rem;
     line-height: 3rem;
 }
@@ -99,37 +103,32 @@ button {
 
 .nav {
     color: var(--text-color);
-    padding: 0.5rem 1rem;
+    padding: var(--gap2) 1rem;
 }
 
 .nav_content_wrapper {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
     justify-content: space-between;
+    gap: 1rem;
     background-color: var(--main-background1);
     border: var(--thick-border) var(--neon-orange);
-    padding: 0.5rem 1rem;
+    padding: var(--gap2) 1rem;
 }
 
 .right_nav_content,
 .left_nav_content {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: min(var(--gap2));
 }
 
 .left_nav_button {
     color: black;
-    font-size: 1.1rem;
     font-weight: 600;
+    font-size: 1rem;
     background-color: var(--neon-orange);
     padding: var(--gap3) var(--gap1);
-    border-radius: 4px;
-}
-
-.right_nav_content {
-    justify-self: end;
-    gap: var(--gap2)
+    border-radius: var(--main-border-radius);
 }
 
 .searchbar_container {
@@ -148,7 +147,7 @@ button {
     color: var(--text-color);
     background-color: var(--main-background1);
     border: var(--thin-border) var(--neon-orange);
-    border-radius: 4px;
+    border-radius: var(--main-border-radius);
 }
 
 #searchbar::placeholder {
@@ -204,15 +203,20 @@ button {
     gap: var(--gap1);
 }
 
-.projects {
+.projects,
+.notifications {
     display: flex;
     flex-direction: column;
     gap: var(--gap1);
 }
 
+h2 {
+    padding-left: var(--gap3);
+}
+
 .dashboard_cell {
-    display: grid;
-    grid-template-rows: max-content 1fr;
+    display: flex;
+    flex-direction: column;
     gap: var(--gap3);
 }
 
@@ -276,7 +280,7 @@ h2, h4 {
 
 .orange_filter {
     filter: invert(45%) sepia(40%) saturate(2275%) hue-rotate(12deg) brightness(111%) contrast(96%);
-}
+} /*Orange filter used to give color to svgs*/
 
 .card_container {
     display: grid;
@@ -292,31 +296,26 @@ h2, h4 {
 }
 
 .card_img {
-    border-radius: 4px;
+    border-radius: var(--main-border-radius);
 }
 
-.card_text_container {
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
-}
-
-.card_title {
-    color: white;
+.card_title,
+.announcement_title {
     border-bottom: var(--thin-border) var(--neon-orange);
-    padding: 2.5px 5px;
+    padding-left: 0.25rem;
+    margin-bottom: 5px;
 }
 
 .card_text {
-    flex: 1;
-    padding: 5px;
-    border-radius: 4px;
+    padding: 0  var(--gap3);
+    border-radius: var(--main-border-radius);
 }
+
 .card_controls{
     padding: 0 5px;
     display: flex;
     justify-content: flex-end;
-    gap: 5px;
+    gap: var(--gap3);
 }
 
 .control {
@@ -335,40 +334,14 @@ h2, h4 {
     background-image: url(./icons/share-variant-outline.svg);
 }
 
-/**/
-.notifications {
-    display: grid;
-    grid-template-rows: max-content max-content;
-    gap: var(--gap1);
-}
-
-.section_title {
-    padding-left: var(--gap3);
-}
-
-.notifications_1,
-.notifications_2 {
-    display: flex;
-    flex-direction: column;
-    gap: var(--gap3);
-}
-
 /*Announcements*/
-.announcement > h4 {
-    border-bottom: 1px solid var(--neon-orange);
-    padding-left: 0.25rem;
-    margin-bottom: 5px;
-}
 
 .announcement_container,
 .trending_container {
-    flex: 1;
     padding: 1.5rem;
-    display: grid;
-    gap: var(--gap1);
-}
-.announcement_container {
-    grid-template-rows: repeat(3, 1fr);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 .announcement_text {
@@ -382,9 +355,6 @@ h2, h4 {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-}
-.trending_container {
-    grid-template-rows: repeat(4, 1fr);
 }
 
 #pic1{
