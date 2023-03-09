@@ -12,9 +12,9 @@ For that matter, the dashboard layout will be composed mostly of grids, although
 ![JS](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
 
 The following tools and pages were used in the design process:
--[Adobe Color](https://color.adobe.com/create/image)
--[Tailwind](https://tailwindcss.com/docs/customizing-colors)
--[SVGs](https://pictogrammers.com/library/mdi/icon/pickaxe/)
+- [Adobe Color](https://color.adobe.com/create/image)
+- [Tailwind](https://tailwindcss.com/docs/customizing-colors)
+- [SVGs](https://pictogrammers.com/library/mdi/icon/pickaxe/)
 
 ## Screenshots
 ![Example screenshot](./images/admin_dashboard_screenshot.png)
